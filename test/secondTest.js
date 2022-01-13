@@ -1,9 +1,21 @@
 const { Builder, Key, By } = require("selenium-webdriver");
 //const {strictEqual} = require("assert");
+const ltCapabilities = require("../capabilities");
 let should = require("chai").should();
 
 // describe block
 describe("Add another todo tests", function () {
+
+
+    beforeEach(function () {
+
+        //executed before each of it block
+    });
+
+    afterEach(function(){
+        //executed after each it block i.e clean up scenarios after each test
+    });
+
 
     //it block
     it("successfully add another todo to application", async function () {
@@ -53,7 +65,7 @@ describe("Add another todo tests", function () {
         //strictEqual(todoText, "Learn Selenium");
 
         //assert using chai should
-        todoText.should.equal("Learn Javascript");
+        todoText.should.equal("Learn Selenium");
 
         //close the browser
         await driver.quit();
